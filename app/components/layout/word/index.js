@@ -1,3 +1,5 @@
+"use client"
+
 import { useScroll, useTransform, motion } from 'framer-motion';
 import React, { useRef } from 'react';
 import styles from './style.module.scss';
