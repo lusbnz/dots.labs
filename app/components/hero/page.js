@@ -6,11 +6,34 @@ import Image from "next/image";
 import moment from "moment";
 import "./style.css";
 import { motion } from "framer-motion";
+import gsap from "gsap";
 
 const Hero = () => {
+  gsap.fromTo(".product .hero", 
+    {
+      scale: 0,
+      opacity: 0,
+    },
+    {
+      delay: 2,
+      duration: 3,
+      scale: 1,
+      opacity: 1,
+      ease: "expo.inOut",
+    }
+  );
+
   return (
     <div className={style.wrapper}>
-      <Image src="/images/hero.gif" alt="hero" width={1248} height={800} />
+      <div className="hero-image">
+        <Image
+          className="hero"
+          src="/images/hero.gif"
+          alt="hero"
+          width={1248}
+          height={800}
+        />
+      </div>
       <motion.span
         className="absolute flex gap-2"
         style={{ fontSize: "12px", left: "180px", bottom: "240px" }}
