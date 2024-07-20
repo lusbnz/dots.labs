@@ -1,10 +1,33 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useRef } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
+import gsap from "gsap";
 
 const Footer = () => {
+  const footerRef = useRef(null);
+
+
+  useEffect(() => {
+    const images = footerRef.current.querySelectorAll('.image');
+    
+    gsap.fromTo(images, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: 'expo.inOut',
+    },{
+      opacity: 1,
+      y: 0,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: 'expo.inOut',
+    });
+  }, []);
   return (
-    <div className={style.wrapper}>
+    <div ref={footerRef} className={style.wrapper}>
       <div className="flex justify-between items-center">
         <div>
           <video

@@ -15,11 +15,11 @@ import Service from "./components/service/page";
 import Video from "./components/video/page";
 
 export default function Home() {
-  const stickyElement = useRef(null);
+  const containerRef = useRef(null);
 
   return (
     <main className="flex flex-col">
-      <StickyCursor stickyElement={stickyElement} />
+      <StickyCursor containerRef={containerRef} />
       <Header />
       <Hero />
       <Video />
@@ -28,7 +28,7 @@ export default function Home() {
       <Passion />
       <Member />
       <Feedback />
-      <Contact />
+      <Contact containerRef={containerRef} />
       <Insight />
       <Footer />
     </main>

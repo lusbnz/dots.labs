@@ -48,7 +48,7 @@ export default function Service() {
       </main>
 
       <div className="ml-8 mb-16">
-        <ActionButton />
+        <ActionButton width={"240px"} height={"70px"} />
       </div>
     </>
   );

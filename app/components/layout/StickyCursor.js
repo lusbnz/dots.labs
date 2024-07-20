@@ -1,9 +1,12 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export default function StickyCursor({ stickyElement }) {
-  const cursorSize = 15;
+export default function StickyCursor({ containerRef }) {
+  const [isHovering, setIsHovering] = useState(false);
+  const cursorSize = isHovering ? 30 : 15;
+  const cursorColor = isHovering ? "red" : "white";
+
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -23,6 +26,26 @@ export default function StickyCursor({ stickyElement }) {
 
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
+    
+    if (containerRef && containerRef.current) {
+      const container = containerRef.current;
+      container.addEventListener("mouseenter", () => setIsHovering(true));
+      container.addEventListener("mouseleave", () => setIsHovering(false));
+
+      return () => {
+        window.removeEventListener("mousemove", manageMouseMove);
+        container.removeEventListener("mouseenter", () => setIsHovering(true));
+        container.removeEventListener("mouseleave", () => setIsHovering(false));
+      };
+    }
+
+    return () => {
+      window.removeEventListener("mousemove", manageMouseMove);
+    };
+  }, [containerRef]);
+
+  useEffect(() => {
+    window.addEventListener("mousemove", manageMouseMove);
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
     };
@@ -35,11 +58,13 @@ export default function StickyCursor({ stickyElement }) {
           left: smoothMouse.x,
           top: smoothMouse.y,
           position: "fixed",
-          width: "15px",
-          height: "15px",
-          backgroundColor: "white",
+          width: cursorSize,
+          height: cursorSize,
+          backgroundColor: cursorColor,
           borderRadius: "100%",
           pointerEvents: "none",
+          transition: "width 0.3s, height 0.3s, background-color 0.3s",
+          zIndex: 9999,
         }}
       ></motion.div>
     </div>
