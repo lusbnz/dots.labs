@@ -1,0 +1,7 @@
+.rotateButton {
+    transform-origin: left center;
+  }
+  
+  .rotateButton:hover {
+    transform: rotate(-2deg);
+  }

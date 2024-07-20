@@ -1,282 +1,89 @@
-"use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import "./style.css";
-import gsap from "gsap";
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
 import BreadCumb from "../layout/BreadCumb";
-
-const team = [
-  {
-    name: "Quan Nguyen",
-    role: "Business Analyst",
-    image: "/images/member.png",
-  },
-  {
-    name: "Giang Pham",
-    role: "Chief Executive Officer",
-    image: "/images/member.png",
-  },
-  { name: "Duc Tun", role: "UI-UX Designer", image: "/images/member.png" },
-];
+import Paragraph from "../layout/word";
 
 const Member = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 3;
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
 
-  const updateInfo = useCallback((slideNumber) => {
-    const member = team[slideNumber - 1];
-    const info = document.querySelector(".info");
-    if (info) {
-      const nameElement = info.querySelector(".name");
-      const roleElement = info.querySelector(".role");
-      if (nameElement) nameElement.textContent = member.name;
-      if (roleElement) roleElement.textContent = member.role;
-    }
-  }, []);
-
-  const animateSlide = useCallback((oldSlideNumber, newSlideNumber) => {
-    const oldMarquee = document.querySelector(
-      `.t-${oldSlideNumber}.marquee-wrapper`
-    );
-    const oldImg = document.getElementById(`t-${oldSlideNumber}`);
-    const newMarquee = document.querySelector(
-      `.t-${newSlideNumber}.marquee-wrapper`
-    );
-    const newImg = document.getElementById(`t-${newSlideNumber}`);
-
-    gsap.to([oldMarquee, oldImg], {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      duration: 0.5,
-      ease: "power4.out",
-      onComplete: () => {
-        gsap.to([newMarquee, newImg], {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-          duration: 0.5,
-          ease: "power4.out",
-          delay: 0.1,
-        });
-      },
-    });
-  }, []);
-
-  const handleRightClick = useCallback(() => {
-    if (currentSlide < totalSlides) {
-      animateSlide(currentSlide, currentSlide + 1);
-      setCurrentSlide((prev) => prev + 1);
-      updateInfo(currentSlide + 1);
-    }
-  }, [currentSlide, totalSlides, animateSlide, updateInfo]);
-
-  const handleLeftClick = useCallback(() => {
-    if (currentSlide > 1) {
-      animateSlide(currentSlide, currentSlide - 1);
-      setCurrentSlide((prev) => prev - 1);
-      updateInfo(currentSlide - 1);
-    }
-  }, [currentSlide, animateSlide, updateInfo]);
-
-  const handleClick = useCallback(
-    (e) => {
-      const xPosition = e.clientX;
-      const halfPageWidth = window.innerWidth / 2;
-      if (xPosition > halfPageWidth) {
-        handleRightClick();
-      } else {
-        handleLeftClick();
-      }
-    },
-    [handleRightClick, handleLeftClick]
-  );
-
-  useEffect(() => {
-    window.addEventListener("click", handleClick);
-    updateInfo(currentSlide);
-    return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  }, [handleClick, updateInfo, currentSlide]);
-
-  useEffect(() => {
-    window.addEventListener("click", handleClick);
-    updateInfo(currentSlide);
-    return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  }, [handleClick, updateInfo, currentSlide]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <div style={{padding: "48px 0"}}>
-      <BreadCumb title={"ĐỘI NGŨ CỦA DOTS"}/>
+      <div className="flex gap-4 items-start">
+    <BreadCumb title={"ĐỘI NGŨ CỦA DOTS"}/>
+    <Paragraph paragraph={"Tại DOTS, đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực."}/>
+    </div>
+    <section ref={targetRef} className="relative h-[300vh]">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {cards.map((card) => {
+            return <Card card={card} key={card.id} />;
+          })}
+        </motion.div>
+      </div>
+    </section>
+    </div>
+  );
+};
+
+const Card = ({ card }) => {
+  return (
+    <div
+      key={card.id}
+      className="group relative h-[450px] w-[450px] overflow-hidden"
+    >
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          boxSizing: "border-box",
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-      >
-        <div
-          style={{
-            width: "1240px",
-            height: "100vh",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              top: "0",
-              left: "0",
-              width: "100%",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              }}
-              className="t-1 marquee-wrapper"
-            >
-              <h1
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "-100%",
-                  transform: "translate(-50%, -50%)",
-                  textAlign: "center",
-                  fontSize: "100px",
-                  textTransform: "uppercase",
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  animation: "marquee 10s linear infinite",
-                  color: "white",
-                }}
-              >
-                Business Analyst Business Analyst Business Analyst
-              </h1>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              }}
-              className="t-2 marquee-wrapper"
-            >
-              <h1
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "-100%",
-                  transform: "translate(-50%, -50%)",
-                  textAlign: "center",
-                  fontSize: "100px",
-                  textTransform: "uppercase",
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  animation: "marquee 10s linear infinite",
-                  color: "white",
-                }}
-              >
-                Digital Marketing Digital Marketing Digital Marketing Digital
-                Marketing Digital Marketing Digital Marketing
-              </h1>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              }}
-              className="t-3 marquee-wrapper"
-            >
-              <h1
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "-100%",
-                  transform: "translate(-50%, -50%)",
-                  textAlign: "center",
-                  fontSize: "100px",
-                  textTransform: "uppercase",
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  animation: "marquee 10s linear infinite",
-                  color: "white",
-                }}
-              >
-                UI-UX Designer UI-UX Designer UI-UX Designer UI-UX Designer
-                UI-UX Designer UI-UX Designer
-              </h1>
-            </div>
-          </div>
-
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "500px",
-              height: "700px",
-            }}
-          >
-            <div style={{ width: "100%", height: "600px" }}>
-              <div
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "600px",
-                  clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                }}
-                id="t-1"
-              >
-                <img className="image" src="/images/member.png" alt="member" />
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "600px",
-                  clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-                }}
-                id="t-2"
-              >
-                <img className="image" src="/images/member.png" alt="member" />
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "600px",
-                  clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-                }}
-                id="t-3"
-              >
-                <img className="image" src="/images/member.png" alt="member" />
-              </div>
-            </div>
-
-            <div className="info">
-              <p className="name"></p>
-              <p className="role" style={{ margin: "5px 0" }}></p>
-            </div>
-          </div>
-        </div>
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+      <div className="absolute inset-0 z-10 grid place-content-end">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+          {card.title}
+        </p>
       </div>
     </div>
   );
 };
 
 export default Member;
+
+const cards = [
+  {
+    url: "/images/member.png",
+    title: "Title 1",
+    id: 1,
+  },
+  {
+    url: "/images/member.png",
+    title: "Title 2",
+    id: 2,
+  },
+  {
+    url: "/images/member.png",
+    title: "Title 3",
+    id: 3,
+  },
+  {
+    url: "/images/member.png",
+    title: "Title 4",
+    id: 4,
+  },
+  {
+    url: "/images/member.png",
+    title: "Title 5",
+    id: 5,
+  },
+  {
+    url: "/images/member.png",
+    title: "Title 6",
+    id: 6,
+  },
+];
