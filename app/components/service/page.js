@@ -47,7 +47,7 @@ export default function Service() {
         <Modal modal={modal} projects={projects} />
       </main>
 
-      <div className="ml-8">
+      <div className="ml-8 mb-16">
         <ActionButton />
       </div>
     </>

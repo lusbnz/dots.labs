@@ -3,4 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background: 50% 50% / cover;
 }

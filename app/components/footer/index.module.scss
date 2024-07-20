@@ -1,6 +1,10 @@
 .wrapper{
-    height: 80px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:4px;
+    border-top: 1px solid #e5e5e5;
+    padding: 24px 40px;
+    height: 230px;
 }
+
