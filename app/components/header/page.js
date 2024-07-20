@@ -49,7 +49,7 @@ export default function Header() {
   );
 
   return (
-    <div className="flex w-screen flex-1 overflow-hidden text-slate-600">
+    <div className="flex w-screen flex-1 overflow-hidden text-slate-600 absolute z-[1002]">
       <div className="z-0 flex-1 overflow-y-scroll">
         <motion.header
           style={{
@@ -109,7 +109,7 @@ export default function Header() {
                   {activeTab === tab.id && (
                     <motion.span
                       layoutId="bubble"
-                      className="absolute inset-0 z-10 bg-white mix-blend-difference"
+                      className="absolute inset-0 z-1000 bg-white mix-blend-difference"
                       style={{ borderRadius: 9999 }}
                       transition={{
                         type: "spring",
