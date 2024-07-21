@@ -33,7 +33,7 @@ export default function FloatingShape() {
   return (
     <Canvas
       orthographic
-      camera={{ position: [0, 0, 200], zoom: 5 }}
+      camera={{ position: [0, 0, 200], zoom: 10 }}
     >
       <Model mouse={smoothMouse} />
       <Environment preset="studio" />
