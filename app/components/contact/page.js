@@ -73,7 +73,7 @@ const Contact = ({ containerRef }) => {
         <span
           ref={titleRef}
           className="absolute"
-          style={{ fontSize: "110px", top: "-48px", textIndent: "200px" }}
+          style={{ fontSize: "96px", top: "-48px", textIndent: "200px" }}
         >
           BẮT ĐẦU KIẾN TẠO NHỮNG GIÁ TRỊ CỦA BẠN NGAY HÔM NAY
         </span>
