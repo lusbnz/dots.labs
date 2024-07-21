@@ -25,7 +25,7 @@ export default function Home() {
       <Video />
       <About />
       <Service />
-      <Passion />
+      <Passion containerRef={containerRef}/>
       <Member />
       <Feedback />
       <Contact containerRef={containerRef} />

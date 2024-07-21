@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import moment from "moment";
@@ -9,19 +9,21 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 const Hero = () => {
-  gsap.fromTo(".product .hero", 
-    {
-      scale: 0,
-      opacity: 0,
-    },
-    {
-      delay: 2,
-      duration: 3,
-      scale: 1,
-      opacity: 1,
-      ease: "expo.inOut",
-    }
-  );
+  useEffect(() => {
+    gsap.fromTo(".product .hero", 
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        delay: 2,
+        duration: 3,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.inOut",
+      }
+    );
+  }, []);
 
   return (
     <div className={style.wrapper}>

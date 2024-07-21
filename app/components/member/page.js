@@ -5,7 +5,7 @@ import { useRef } from "react";
 import BreadCumb from "../layout/BreadCumb";
 import Paragraph from "../layout/word";
 
-const Member = ({containerRef}) => {
+const Member = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -21,7 +21,6 @@ const Member = ({containerRef}) => {
           paragraph={
             "Tại DOTS, đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực."
           }
-          containerRef={containerRef}
         />
       </div>
       <section ref={targetRef} className="relative h-[300vh]">

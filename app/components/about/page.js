@@ -6,12 +6,12 @@ import Paragraph from "../layout/word";
 const paragraph =
   "Chng tôi là creative agency thiết kế website và xây dựng thương hiệu, Chng tôi gip doanh nghiệp kết nối với khách hàng bằng câu chuyện của thị giác, ngôn từ và sức mạnh của công nghệ.";
 
-const About = ({ containerRef }) => {
+const About = () => {
   return (
-    <>
+    <div>
       <div className="flex gap-8 items-start">
         <BreadCumb title={"GIỚI THIỆU"} />
-        <Paragraph paragraph={paragraph} containerRef={containerRef} />
+        <Paragraph paragraph={paragraph} />
       </div>
       <div className={style.wrapper}>
         <video
@@ -22,7 +22,7 @@ const About = ({ containerRef }) => {
           className="h-[800px]"
         />
       </div>
-    </>
+    </div>
   );
 };
 
