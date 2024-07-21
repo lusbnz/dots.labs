@@ -67,7 +67,7 @@ const Hero = () => {
       </motion.span>
       <motion.span
         className="absolute"
-        style={{ fontSize: "200px", bottom: "0px" }}
+        style={{ fontSize: "180px", bottom: "0px" }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}

@@ -5,7 +5,7 @@ import style from "./index.module.scss";
 import BreadCumb from "../layout/BreadCumb";
 import Card from "./Card";
 import { motion, animate, useMotionValue } from "framer-motion";
-import useMeasure from "react-use-measure";
+import useMeasure from "react-use-measure"; 
 
 const images = [
   {
