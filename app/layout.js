@@ -1,7 +1,7 @@
-import { Acme } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const acme = Acme({
+const inter = Inter({
   weight: "400",
   subsets: ["latin"],
 });
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={acme.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
