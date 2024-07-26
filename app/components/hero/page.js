@@ -10,7 +10,8 @@ import gsap from "gsap";
 
 const Hero = () => {
   useEffect(() => {
-    gsap.fromTo(".product .hero", 
+    gsap.fromTo(
+      ".product .hero",
       {
         scale: 0,
         opacity: 0,
@@ -26,7 +27,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className={style.wrapper}>
+    <div
+      className={style.wrapper}
+      style={{
+        background:
+          "linear-gradient(180deg, #16160E 0%, #1D1F18 9.9%, #6C848D 100%)",
+      }}
+    >
       <div className="hero-image">
         <Image
           className="hero"
