@@ -51,7 +51,7 @@ const Card = ({ card }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-end">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-[36px] font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
       </div>
@@ -64,32 +64,32 @@ export default Member;
 const cards = [
   {
     url: "/images/member.png",
-    title: "Title 1",
+    title: "Quan Nguyen",
     id: 1,
   },
   {
     url: "/images/member.png",
-    title: "Title 2",
+    title: "Quan Nguyen",
     id: 2,
   },
   {
     url: "/images/member.png",
-    title: "Title 3",
+    title: "Quan Nguyen",
     id: 3,
   },
   {
     url: "/images/member.png",
-    title: "Title 4",
+    title: "Quan Nguyen",
     id: 4,
   },
   {
     url: "/images/member.png",
-    title: "Title 5",
+    title: "Quan Nguyen",
     id: 5,
   },
   {
     url: "/images/member.png",
-    title: "Title 6",
+    title: "Quan Nguyen",
     id: 6,
   },
 ];

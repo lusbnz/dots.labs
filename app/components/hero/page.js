@@ -74,12 +74,21 @@ const Hero = () => {
       </motion.span>
       <motion.span
         className="absolute"
-        style={{ fontSize: "180px", bottom: "0px" }}
+        style={{ fontSize: "360px", bottom: "-72px", left: "80px" }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        DOTS AGENCY
+        D
+      </motion.span>
+      <motion.span
+        className="absolute"
+        style={{ fontSize: "180px", bottom: "0px", left: "330px" }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+      >
+        OTS AGENCY
       </motion.span>
     </div>
   );
