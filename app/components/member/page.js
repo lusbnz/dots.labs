@@ -44,7 +44,9 @@ const Card = ({ card }) => {
     <div
       ref={cardRef}
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden"
+      className={`group relative h-[450px] w-[450px] overflow-hidden ${
+        isInView ? "scale-130" : ""
+      }`}
     >
       <div
         style={{
@@ -52,12 +54,22 @@ const Card = ({ card }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+        className={`absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 ${
+          isInView ? "scale-130" : ""
+        }`}
       ></div>
+      {!isInView && (
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      )}
       {isInView && (
         <>
-          <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="absolute inset-0 z-10 flex h-100 w-100 items-end">
+          <div
+            className="absolute inset-0 z-10 flex h-100 w-100 items-end"
+            style={{
+              background:
+                "linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)",
+            }}
+          >
             <p className="p-8 text-[22px] font-black uppercase text-white">
               {card.title}
             </p>
