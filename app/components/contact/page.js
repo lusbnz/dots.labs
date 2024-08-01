@@ -4,11 +4,13 @@ import BreadCumb from "../layout/BreadCumb";
 import Image from "next/image";
 import ActionButton from "../layout/ActionButton";
 import gsap from "gsap";
+import B from "@/public/icons/B.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = ({ containerRef }) => {
+  const charRef = useRef(null);
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const formRef = useRef(null);
@@ -16,6 +18,21 @@ const Contact = ({ containerRef }) => {
   useEffect(() => {
     const section = containerRef.current;
 
+    gsap.fromTo(
+      charRef.current,
+      { scale: 0, opacity: 0 },
+      {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "expo.inOut",
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
     gsap.fromTo(
       titleRef.current,
       { scale: 0, opacity: 0 },
@@ -70,12 +87,13 @@ const Contact = ({ containerRef }) => {
     <div>
       <BreadCumb title={"LIÊN HỆ"} />
       <div ref={containerRef} className="relative h-[100vh] p-20">
+        <Image ref={charRef} src={B} alt="B" style={{ width: "360px", height: "300px", position: "absolute", top: "-200px", left: "120px" }} />
         <span
           ref={titleRef}
           className="absolute"
-          style={{ fontSize: "96px", top: "-48px", textIndent: "200px" }}
+          style={{ fontSize: "96px", top: "-48px", textIndent: "360px", fontFamily: "PPRader" }}
         >
-          BẮT ĐẦU KIẾN TẠO NHỮNG GIÁ TRỊ CỦA BẠN NGAY HÔM NAY
+          ẮT ĐẦU KIẾN TẠO NHỮNG GIÁ TRỊ CỦA BẠN NGAY HÔM NAY
         </span>
         <Image
           ref={imageRef}
@@ -83,7 +101,7 @@ const Contact = ({ containerRef }) => {
           width={200}
           height={120}
           alt="contact"
-          style={{ position: "absolute", right: "300px", top: "300px" }}
+          style={{ position: "absolute", left: "100px", top: "300px" }}
         />
         <span
           className="absolute"
@@ -94,7 +112,7 @@ const Contact = ({ containerRef }) => {
         </span>
         <div
           ref={formRef}
-          className="absolute flex flex-col right-[40%] top-[65%] gap-2"
+          className="absolute flex flex-col right-[40%] top-[40%] gap-2"
         >
           <input
             type="text"

@@ -7,6 +7,7 @@ import moment from "moment";
 import "./style.css";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import D from "@/public/icons/D.svg";
 
 const Hero = () => {
   useEffect(() => {
@@ -64,7 +65,7 @@ const Hero = () => {
       </motion.div>
       <motion.span
         className="absolute flex gap-2"
-        style={{ fontSize: "12px", right: "160px", bottom: "240px" }}
+        style={{ fontSize: "12px", right: "130px", bottom: "240px" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -74,16 +75,21 @@ const Hero = () => {
       </motion.span>
       <motion.span
         className="absolute"
-        style={{ fontSize: "360px", bottom: "-72px", left: "80px" }}
+        style={{ fontSize: "360px", bottom: "-24px", left: "80px" }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        D
+        <Image src={D} alt="D" style={{ width: "420px", height: "520px" }} />
       </motion.span>
       <motion.span
         className="absolute"
-        style={{ fontSize: "180px", bottom: "0px", left: "330px" }}
+        style={{
+          fontSize: "200px",
+          bottom: "-40px",
+          left: "360px",
+          fontFamily: "PPRader",
+        }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}

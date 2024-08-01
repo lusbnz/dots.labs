@@ -6,3 +6,8 @@ body{
     background-color: #000000;
     color: #FFFFFF;
 }
+
+@font-face{
+    font-family: 'PPRader';
+    src: url('../public/fonts/PPRader-Regular.ttf');
+}

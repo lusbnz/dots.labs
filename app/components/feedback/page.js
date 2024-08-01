@@ -41,6 +41,19 @@ const Feedback = () => {
     setProgress(((currentFeedback + 1) / feedbacks.length) * 100);
   }, [currentFeedback]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection("next");
+      setAnimating(true);
+      setCurrentFeedback((prev) => (prev + 1) % feedbacks.length);
+      setTimeout(() => {
+        setAnimating(false);
+      }, 500);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   const handleNext = () => {
     if (animating) return;
     setDirection("next");

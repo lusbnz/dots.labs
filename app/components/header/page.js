@@ -14,7 +14,7 @@ let tabs = [
   { id: "work", label: "Work" },
   { id: "service", label: "Service" },
   { id: "blogs", label: "Blogs" },
-  { id: "let's talk", label: "Let's Talk" },
+  // { id: "let's talk", label: "Let's Talk" },
 ];
 
 function useBoundedScroll(threshold) {
@@ -40,7 +40,7 @@ function useBoundedScroll(threshold) {
 }
 
 export default function Header() {
-  let [activeTab, setActiveTab] = useState(tabs[4].id);
+  let [activeTab, setActiveTab] = useState(tabs[3].id);
   let { scrollYBoundedProgress } = useBoundedScroll(400);
   let scrollYBoundedProgressDelayed = useTransform(
     scrollYBoundedProgress,
@@ -58,11 +58,7 @@ export default function Header() {
               [0, 1],
               [80, 50]
             ),
-            backgroundColor: useMotionTemplate`rgb(0 0 0 / ${useTransform(
-              scrollYBoundedProgressDelayed,
-              [0, 1],
-              [1, 0.1]
-            )})`,
+            backgroundColor: "transparent",
           }}
           className="fixed inset-x-0 flex h-20 shadow backdrop-blur-md"
         >
@@ -78,11 +74,19 @@ export default function Header() {
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
               <span className="w-6 h-6 rounded-full bg-white mr-2"></span>
-              <span className="-ml-1.5 inline-block -rotate-90 text-[10px] leading-[0]">
-                The
-              </span>
-              <span className="-ml-1 text-2xl tracking-[-.075em]">
-                DOTS  AGENCY
+              <span className="flex flex-col justify-center items-start">
+                <span
+                  style={{ lineHeight: "18px" }}
+                  className="text-lg tracking-[-.075em]"
+                >
+                  DOTS
+                </span>
+                <span
+                  style={{ lineHeight: "18px" }}
+                  className="text-lg tracking-[-.075em]"
+                >
+                  AGENCY
+                </span>
               </span>
             </motion.p>
             <motion.nav
@@ -95,7 +99,7 @@ export default function Header() {
               }}
               className="flex space-x-4 text-sm font-medium text-slate-400"
             >
-              {tabs.map((tab) => (
+              {/* {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
@@ -120,7 +124,36 @@ export default function Header() {
                   )}
                   {tab.label}
                 </button>
-              ))}
+              ))} */}
+              <div className="flex items-center">
+                {tabs.map((tab, index) => (
+                  <button
+                    key={tab.id}
+                    style={{
+                      backgroundColor: "#ffffff",
+                      width: "80px",
+                      height: "36px",
+                      color: "#000000",
+                      borderRadius: index === 0 ? "10px 0 0 10px" : index === 3 ? "0 10px 10px 0" : "0",
+                    }}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                style={{
+                  backgroundColor: "#C8D5BB",
+                  borderRadius: "10px",
+                  width: "80px",
+                  height: "36px",
+                  marginLeft: "12px",
+                  color: "#000000",
+                }}
+              >
+                Lets Talk
+              </button>
             </motion.nav>
           </div>
         </motion.header>

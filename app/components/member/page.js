@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, useInView } from "framer-motion";
 import { useRef } from "react";
 import BreadCumb from "../layout/BreadCumb";
 import Paragraph from "../layout/word";
@@ -37,8 +37,12 @@ const Member = () => {
 };
 
 const Card = ({ card }) => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { amount: 1 });
+
   return (
     <div
+      ref={cardRef}
       key={card.id}
       className="group relative h-[450px] w-[450px] overflow-hidden"
     >
@@ -50,11 +54,16 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-end">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-[36px] font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
+      {isInView && (
+        <>
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="absolute inset-0 z-10 flex h-100 w-100 items-end">
+            <p className="p-8 text-[22px] font-black uppercase text-white">
+              {card.title}
+            </p>
+          </div>
+        </>
+      )}
     </div>
   );
 };

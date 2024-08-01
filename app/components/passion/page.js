@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import BreadCumb from "../layout/BreadCumb";
 import Paragraph from "../layout/word";
 import { motion } from "framer-motion";
+import D from "@/public/icons/D.svg";
+import Image from "next/image";
 
 const paragraph =
   "DOTS là ngôi nhà của những gã 'trẻ mà không non nghề' đam mê thiết kế phát triển website và xây dựng thương hiệu chuyên nghiệp";
@@ -49,7 +51,7 @@ const Passion = () => {
 
   const getWordStyle = (id) => ({
     position: "absolute",
-    transition: "all 0.3s ease",
+    transition: "all 0.3s ease-in-out",
     opacity: activeDiv === id ? 1 : 0,
     left: activeDiv === id ? "36px" : "50%",
     transform: activeDiv === id ? "translateX(0)" : "translateX(-50%)",
@@ -72,7 +74,8 @@ const Passion = () => {
     >
       <div className="flex gap-8 items-start absolute top-[48px] z-[2]">
         <BreadCumb title={"VỀ CHÚNG TÔI"} />
-        <Paragraph paragraph={paragraph} />
+        {/* <Image src={D} alt="D" style={{ width: "110px", height: "90px", position: "absolute" }} /> */}
+        <Paragraph paragraph={paragraph}/>
       </div>
       <div className="h-[120vh] relative">
         <svg

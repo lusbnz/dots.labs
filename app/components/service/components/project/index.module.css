@@ -6,7 +6,7 @@
     padding: 50px 100px 50px 100px;
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
     min-height: 240px;
 }
 .project:last-of-type{
@@ -14,7 +14,9 @@
 }
 
 .project:hover{
+    height: 300px;
     opacity: 0.5;
+    transition: all 0.2s ease-in-out;
 }
 
 .project:hover h2{
