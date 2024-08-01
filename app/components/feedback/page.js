@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
 import style from "./index.module.css";
 import BreadCumb from "../layout/BreadCumb";

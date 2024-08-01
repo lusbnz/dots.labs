@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import BreadCumb from "../layout/BreadCumb";
 import Paragraph from "../layout/word";
