@@ -3,7 +3,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useRef } from "react";
 import styles from "./style.module.scss";
-import D from "@/public/icons/D.svg";
+import DOTS from "@/public/icons/DOST.svg";
 import Image from "next/image";
 
 export default function Paragraph({ paragraph }) {
@@ -15,13 +15,7 @@ export default function Paragraph({ paragraph }) {
 
   const words = paragraph.split(" ").map((word, index) =>
     word === "DOTS" || word === "DOTS," ? (
-      <span
-        key={index}
-        style={{ display: "inline-flex", lineHeight: '1.2', alignItems: "end", paddingBottom: '0px !important' }}
-      >
-        <Image src={D} alt="D" style={{ height: "96px", width: "96px" }} />
-        <span>OTS</span>
-      </span>
+      <Image src={DOTS} alt="DOTS" key="DOTS" style={{ height: "96px", width: "128px" }} />
     ) : (
       word
     )

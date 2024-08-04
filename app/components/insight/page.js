@@ -5,7 +5,7 @@ import style from "./index.module.scss";
 import BreadCumb from "../layout/BreadCumb";
 import Card from "./Card";
 import { motion, animate, useMotionValue } from "framer-motion";
-import useMeasure from "react-use-measure"; 
+import useMeasure from "react-use-measure";
 
 const images = [
   {
@@ -81,7 +81,17 @@ const Insight = () => {
           }}
         >
           {[...images].map((item, index) => (
-            <Card image={item.url} key={index} />
+            <div key={index} className="flex flex-col">
+              <Card image={item.url} key={index} />
+              <div className="mt-[24px]">
+                <div className="flex items-center gap-2 mb-[16px]">
+                  <span className="text-[17px]">SEP 23, 2023</span>
+                  <span className="w-[4px] h-[4px] rounded-full bg-[#FFFFFF]"></span>
+                  <span className="text-[17px] opacity-50">BRANDING</span>
+                </div>
+                <span>Hãy cung cấp những thông tin dưới dây chúng tôi sẽ liên hệ bạn sớm nhất!</span>
+              </div>
+            </div>
           ))}
         </motion.div>
       </div>
