@@ -65,7 +65,7 @@ const Hero = () => {
       </motion.div>
       <motion.span
         className="absolute flex gap-2"
-        style={{ fontSize: "12px", right: "130px", bottom: "240px" }}
+        style={{ fontSize: "12px", right: "40px", bottom: "240px" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
