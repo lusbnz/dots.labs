@@ -6,6 +6,8 @@ import BreadCumb from "../layout/BreadCumb";
 import Card from "./Card";
 import { motion, animate, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
+import MultipleItems from "./MultipleItems";
+import Slider from "react-slick";
 
 const images = [
   {
@@ -63,6 +65,14 @@ const Insight = () => {
     return controls?.stop;
   }, [xTranslation, width, duration, rerender]);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
   return (
     <>
       <BreadCumb title={"Insight"} />
@@ -89,6 +99,7 @@ const Insight = () => {
                   <span className="w-[4px] h-[4px] rounded-full bg-[#FFFFFF]"></span>
                   <span className="text-[17px] opacity-50">BRANDING</span>
                 </div>
+      
                 <span>Hãy cung cấp những thông tin dưới dây chúng tôi sẽ liên hệ bạn sớm nhất!</span>
               </div>
             </div>

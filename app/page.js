@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <main className="relative flex flex-col items-center">
-      <div className="relative max-w-[1440px]">
+      <div className="relative w-screen">
         <StickyCursor containerRef={containerRef} />
         <Header />
         <Hero />
