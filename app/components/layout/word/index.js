@@ -15,7 +15,7 @@ export default function Paragraph({ paragraph }) {
 
   const words = paragraph.split(" ").map((word, index) =>
     word === "DOTS" || word === "DOTS," ? (
-      <Image src={DOTS} alt="DOTS" key="DOTS" style={{ height: "96px", width: "128px" }} />
+      <Image src={DOTS} alt="DOTS" key="DOTS" style={{ height: "120px", width: "160px" }} />
     ) : (
       word
     )

@@ -20,8 +20,8 @@ export default function Home() {
   const containerRef = useRef(null);
 
   return (
-    <main className="relative flex flex-col items-center">
-      <div className="relative w-screen">
+    <main className="relative flex flex-col items-center overflow-x-hidden">
+      <div className="relative w-screen overflow-x-hidden">
         <StickyCursor containerRef={containerRef} />
         <Header />
         <Hero />
@@ -34,32 +34,6 @@ export default function Home() {
         <Contact containerRef={containerRef} />
         <Insight />
         <Footer />
-
-        <div
-          className="absolute"
-          style={{
-            zIndex: 9999,
-            width: "60px",
-            height: "60px",
-            borderRadius: "100%",
-            backgroundColor: "transparent",
-            border: "1px solid #ffffff",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            right: "60px",
-            bottom: `1000px`,
-          }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <Image
-            src={ArrowButton}
-            alt=""
-            width={24}
-            height={24}
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </div>
       </div>
     </main>
   );

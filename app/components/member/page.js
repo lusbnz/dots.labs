@@ -13,9 +13,18 @@ const Member = () => {
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
   return (
     <div style={{ padding: "48px 0" }}>
-      <div className="flex gap-4 items-start">
+      <div className="flex gap-4 items-start justify-between">
         <BreadCumb title={"ĐỘI NGŨ CỦA DOTS"} />
         <Paragraph
           paragraph={
@@ -23,7 +32,7 @@ const Member = () => {
           }
         />
       </div>
-      <section ref={targetRef} className="relative h-[300vh]">
+      {/* <section ref={targetRef} className="relative h-[300vh]">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           <motion.div style={{ x }} className="flex gap-4">
             {cards.map((card) => {
@@ -31,7 +40,28 @@ const Member = () => {
             })}
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      <div className="h-[100vh] flex w-100 justify-center items-center">
+        <div className="w-[595px] h-[700px] rounded-[20px] bg-[#C8D5BB] relative">
+          <img
+            src={cards[0].url}
+            alt="card"
+            style={{ width: "595px", height: "800px", top: "-60px" }}
+            className="absolute"
+          />
+          <div
+            className="w-[595px] h-[360px] absolute bottom-0 flex flex-col justify-end p-[28px]"
+            style={{
+              zIndex: "2",
+              background:
+                "linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
+            }}
+          >
+            <span className="text-[22px]">{cards[0].title}</span>
+            <span className="text-[17px] opacity-40">Business Analyst</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -90,32 +120,32 @@ export default Member;
 
 const cards = [
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 1,
   },
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 2,
   },
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 3,
   },
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 4,
   },
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 5,
   },
   {
-    url: "/images/member.png",
+    url: "/images/abc.svg",
     title: "Quan Nguyen",
     id: 6,
   },

@@ -18,9 +18,9 @@ export default function Index({ index, title, setModal }) {
       }}
       className={styles.project}
     >
-      <span className="flex items-center gap-8">
+      <span className="flex items-center gap-8 w-100">
         <span>({index + 1})</span>
-        <h2 style={{ maxWidth: "500px" }}>{title}</h2>
+        <h2 style={{ maxWidth: "1000px" }}>{title}</h2>
       </span>
       <p className={`${styles.description} ${isHovered ? styles.show : ""}`}>
         Website như ngôi nhà của thương hiệu. Hãy để Dots cùng bạn tạo ra trải

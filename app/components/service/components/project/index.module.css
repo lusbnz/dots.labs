@@ -8,6 +8,7 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     min-height: 240px;
+    opacity: 0.5;
 }
 .project:last-of-type{
     border-bottom: 1px solid rgb(201, 201, 201);
@@ -15,7 +16,7 @@
 
 .project:hover{
     height: 300px;
-    opacity: 0.5;
+    opacity: 1;
     transition: all 0.2s ease-in-out;
 }
 
@@ -28,7 +29,7 @@
 }
 
 .project h2{
-    font-size: 60px;
+    font-size: 80px;
     margin: 0px;
     font-weight: 400;
     transition: all 0.4s;
@@ -41,7 +42,7 @@
 
 .description {
     max-width: 300px;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;

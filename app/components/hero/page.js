@@ -10,23 +10,6 @@ import gsap from "gsap";
 import D from "@/public/icons/D.svg";
 
 const Hero = () => {
-  useEffect(() => {
-    gsap.fromTo(
-      ".product .hero",
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        delay: 2,
-        duration: 3,
-        scale: 1,
-        opacity: 1,
-        ease: "expo.inOut",
-      }
-    );
-  }, []);
-
   return (
     <div
       className={style.wrapper}
@@ -40,13 +23,13 @@ const Hero = () => {
           className="hero"
           src="/images/hero.gif"
           alt="hero"
-          width={1248}
-          height={800}
+          width={1920}
+          height={1080}
         />
       </div>
       <motion.span
         className="absolute flex gap-2"
-        style={{ fontSize: "12px", left: "180px", bottom: "240px" }}
+        style={{ fontSize: "18px", left: "160px", bottom: "360px" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -55,7 +38,7 @@ const Hero = () => {
       </motion.span>
       <motion.div
         className="absolute flex gap-2"
-        style={{ fontSize: "12px", left: "500px", bottom: "240px" }}
+        style={{ fontSize: "18px", left: "520px", bottom: "360px" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
@@ -65,7 +48,7 @@ const Hero = () => {
       </motion.div>
       <motion.span
         className="absolute flex gap-2"
-        style={{ fontSize: "12px", right: "40px", bottom: "240px" }}
+        style={{ fontSize: "18px", right: "42px", bottom: "360px" }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -75,26 +58,26 @@ const Hero = () => {
       </motion.span>
       <motion.span
         className="absolute"
-        style={{ fontSize: "360px", bottom: "-24px", left: "80px" }}
+        style={{ fontSize: "360px", bottom: "96px", left: "42px" }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        <Image src={D} alt="D" style={{ width: "420px", height: "520px" }} />
+        <Image src={D} alt="D" style={{ width: "520px", height: "420px" }} />
       </motion.span>
       <motion.span
         className="absolute"
         style={{
-          fontSize: "200px",
+          fontSize: "286px",
           bottom: "-40px",
-          left: "360px",
+          left: "380px",
           fontFamily: "PPRader",
         }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        OTS AGENCY
+        OTS  AGENCY
       </motion.span>
     </div>
   );

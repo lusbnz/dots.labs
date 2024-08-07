@@ -49,7 +49,7 @@ export default function Header() {
   );
 
   return (
-    <div className="flex w-screen flex-1 overflow-hidden text-slate-600 absolute z-[1002]">
+    <div className="flex w-screen flex-1 overflow-hidden text-slate-600 px-[42px] absolute z-[1002]">
       <div className="z-0 flex-1 overflow-y-scroll">
         <motion.header
           style={{
@@ -60,9 +60,9 @@ export default function Header() {
             ),
             backgroundColor: "transparent",
           }}
-          className="fixed inset-x-0 flex h-20 shadow backdrop-blur-md"
+          className="fixed inset-x-0 flex h-20 py-[42px]"
         >
-          <div className="flex w-full items-center justify-between px-8">
+          <div className="flex w-full items-center justify-between px-8 py-[42px]">
             <motion.p
               style={{
                 scale: useTransform(
@@ -73,17 +73,17 @@ export default function Header() {
               }}
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
-              <span className="w-6 h-6 rounded-full bg-white mr-2"></span>
+              <span className="w-[55px] h-[55px] rounded-full bg-white mr-2"></span>
               <span className="flex flex-col justify-center items-start">
                 <span
-                  style={{ lineHeight: "18px" }}
-                  className="text-lg tracking-[-.075em]"
+                  style={{ lineHeight: "24px" }}
+                  className="text-[24px] tracking-[-.075em]"
                 >
                   DOTS
                 </span>
                 <span
-                  style={{ lineHeight: "18px" }}
-                  className="text-lg tracking-[-.075em]"
+                  style={{ lineHeight: "24px" }}
+                  className="text-[24px] tracking-[-.075em]"
                 >
                   AGENCY
                 </span>
@@ -99,42 +99,22 @@ export default function Header() {
               }}
               className="flex space-x-4 text-sm font-medium text-slate-400"
             >
-              {/* {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`${
-                    activeTab === tab.id ? "" : "hover:text-white/60"
-                  } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                  }}
-                >
-                  {activeTab === tab.id && (
-                    <motion.span
-                      layoutId="bubble"
-                      className="absolute inset-0 z-1000 bg-white mix-blend-difference"
-                      style={{ borderRadius: 9999 }}
-                      transition={{
-                        type: "spring",
-                        bounce: 0.2,
-                        duration: 0.6,
-                      }}
-                    />
-                  )}
-                  {tab.label}
-                </button>
-              ))} */}
               <div className="flex items-center">
                 {tabs.map((tab, index) => (
                   <button
                     key={tab.id}
                     style={{
                       backgroundColor: "#ffffff",
-                      width: "80px",
-                      height: "36px",
+                      width: "146px",
+                      height: "70px",
+                      fontSize: "21px",
                       color: "#000000",
-                      borderRadius: index === 0 ? "10px 0 0 10px" : index === 3 ? "0 10px 10px 0" : "0",
+                      borderRadius:
+                        index === 0
+                          ? "10px 0 0 10px"
+                          : index === 3
+                          ? "0 10px 10px 0"
+                          : "0",
                     }}
                   >
                     {tab.label}
@@ -146,9 +126,10 @@ export default function Header() {
                 style={{
                   backgroundColor: "#C8D5BB",
                   borderRadius: "10px",
-                  width: "80px",
-                  height: "36px",
-                  marginLeft: "12px",
+                  width: "146px",
+                  height: "70px",
+                  fontSize: "21px",
+                  marginLeft: "8px",
                   color: "#000000",
                 }}
               >

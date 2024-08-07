@@ -42,29 +42,29 @@ const Footer = () => {
           <Image
             src="/icons/Facebook.svg"
             alt="LogoF"
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             className="image"
           />
           <Image
             src="/icons/Pinterest.svg"
             alt="LogoP"
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             className="image"
           />
           <Image
             src="/icons/Tiktok.svg"
             alt="LogoT"
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             className="image"
           />
           <Image
             src="/icons/Instagram.svg"
             alt="LogoI"
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             className="image"
           />
         </div>
@@ -72,15 +72,15 @@ const Footer = () => {
       <div className="flex justify-between items-end">
         <div className="flex items-center gap-20">
           <div className="flex flex-col gap-4 items-start">
-            <span style={{ color: "rgba(255, 255, 255, 0.20)" }}>Email</span>
-            <span>dotsagency.info@gmail.com</span>
+            <span className="text-[22px]" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Email</span>
+            <span className="text-[26px]">dotsagency.info@gmail.com</span>
           </div>
           <div className="flex flex-col gap-4 items-start">
-            <span style={{ color: "rgba(255, 255, 255, 0.20)" }}>Hotline</span>
-            <span>09328739244</span>
+            <span className="text-[22px]" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Hotline</span>
+            <span className="text-[26px]">09328739244</span>
           </div>
         </div>
-        <div>2024 © Dots Co., Ltd.</div>
+        <div className="text-[18px]">2024 © Dots Co., Ltd.</div>
       </div>
     </div>
   );

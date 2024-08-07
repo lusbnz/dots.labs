@@ -57,7 +57,7 @@ const Card = ({ image }) => {
       <Image
         src={image}
         alt={image}
-        width={600}
+        width={636}
         height={400}
         style={{ objectFit: "cover" }}
       />

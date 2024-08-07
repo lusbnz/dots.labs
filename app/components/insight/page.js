@@ -22,10 +22,6 @@ const images = [
     url: "https://picsum.photos/600/400",
     title: "image 3",
   },
-  {
-    url: "https://picsum.photos/600/400",
-    title: "image 4",
-  },
 ];
 
 const Insight = () => {
@@ -77,18 +73,18 @@ const Insight = () => {
     <>
       <BreadCumb title={"Insight"} />
       <div className={style.wrapper}>
-        <motion.div
-          className="absolute left-0 flex gap-4 w-full"
-          ref={ref}
-          style={{ x: xTranslation }}
-          onHoverStart={() => {
-            setMustFinish(true);
-            setDuration(SLOW_DURATION);
-          }}
-          onHoverEnd={() => {
-            setMustFinish(true);
-            setDuration(FAST_DURATION);
-          }}
+        <div
+          className="flex gap-4 w-full justify-around"
+          // ref={ref}
+          // style={{ x: xTranslation }}
+          // onHoverStart={() => {
+          //   setMustFinish(true);
+          //   setDuration(SLOW_DURATION);
+          // }}
+          // onHoverEnd={() => {
+          //   setMustFinish(true);
+          //   setDuration(FAST_DURATION);
+          // }}
         >
           {[...images].map((item, index) => (
             <div key={index} className="flex flex-col">
@@ -104,7 +100,7 @@ const Insight = () => {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </>
   );

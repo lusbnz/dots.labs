@@ -169,7 +169,7 @@ const Feedback = () => {
               {feedbacks[currentFeedback].quote}
             </span>
             <span
-              style={{ fontSize: "16px", display: "inline-flex", gap: "10px" }}
+              style={{ fontSize: "28px", display: "inline-flex", gap: "10px" }}
             >
               <p>{feedbacks[currentFeedback].author}</p>
               <p style={{ opacity: 0.4 }}>

@@ -19,7 +19,7 @@ const About = () => {
           autoPlay
           loop
           muted
-          className="h-[800px]"
+          className="h-[1000px]"
         />
       </div>
     </div>

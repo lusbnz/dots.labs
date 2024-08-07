@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import BreadCumb from "../layout/BreadCumb";
@@ -11,18 +11,18 @@ const paragraph =
   "DOTS là ngôi nhà của những gã 'trẻ mà không non nghề' đam mê thiết kế phát triển website và xây dựng thương hiệu chuyên nghiệp";
 
 const dots = [
-  { id: "D", word: "iscipline", top: "600px", left: "240px" },
-  { id: "O", word: "perator", top: "300px", left: "480px" },
-  { id: "T", word: "ransaction", top: "660px", left: "720px" },
-  { id: "S", word: "uccessful", top: "480px", left: "1080px" },
+  { id: "D", word: "iscipline", top: "720px", left: "240px" },
+  { id: "O", word: "perator", top: "360px", left: "920px" },
+  { id: "T", word: "ransaction", top: "880px", left: "800px" },
+  { id: "S", word: "uccessful", top: "560px", left: "1440px" },
 ];
 
 const lines = [
-  { d: "M360 600 L500 432" },
-  { d: "M560 460 L748 680" },
-  { d: "M880 700 L1092 600" },
-  { d: "M640 380 L1092 520" },
-  { d: "M400 690 L720 740" },
+  { d: "M400 800 L920 560" },
+  { d: "M1000 560 L900 800" },
+  { d: "M1440 720 L960 1000" },
+  { d: "M1100 480 L1440 560" },
+  { d: "M400 780 L800 1000" },
 ];
 
 const Passion = () => {
@@ -33,10 +33,10 @@ const Passion = () => {
     alignItems: "center",
     justifyContent: "center",
     color: activeDiv === id ? "#000000" : "rgba(255, 255, 255, 0.30)",
-    fontSize: activeDiv === id ? "24px" : "96px",
+    fontSize: activeDiv === id ? "24px" : "140px",
     zIndex: "2",
-    width: "160px",
-    height: "160px",
+    width: "240px",
+    height: "240px",
     borderRadius: "100%",
     border: "1px solid rgba(255, 255, 255, 0.40)",
     backgroundColor: activeDiv === id ? "#C8D5BB" : "transparent",
@@ -49,14 +49,16 @@ const Passion = () => {
     transition: "all 0.3s ease",
     left: activeDiv === id ? "20px" : "50%",
     transform: activeDiv === id ? "translateX(0)" : "translateX(-50%)",
+    fontSize: "36px",
   });
 
   const getWordStyle = (id) => ({
     position: "absolute",
     transition: "all 0.3s ease-in-out",
     opacity: activeDiv === id ? 1 : 0,
-    left: activeDiv === id ? "36px" : "50%",
+    left: activeDiv === id ? "44px" : "50%",
     transform: activeDiv === id ? "translateX(0)" : "translateX(-50%)",
+    fontSize: "36px",
   });
 
   const calculateMidpoint = (x1, y1, x2, y2) => ({
@@ -77,9 +79,9 @@ const Passion = () => {
       <div className="flex gap-8 items-start absolute top-[48px] z-[2]">
         <BreadCumb title={"VỀ CHÚNG TÔI"} />
         {/* <Image src={D} alt="D" style={{ width: "110px", height: "90px", position: "absolute" }} /> */}
-        <Paragraph paragraph={paragraph}/>
+        <Paragraph paragraph={paragraph} />
       </div>
-      <div className="h-[120vh] relative">
+      <div className="h-[160vh] relative">
         <svg
           className="absolute top-0 left-0 w-full h-full"
           style={{ zIndex: 1 }}
@@ -140,7 +142,7 @@ const Passion = () => {
           });
 
           return (
-               <motion.div
+            <motion.div
               key={id}
               initial={{ x: 0, y: 0 }}
               animate={randomMotion()}

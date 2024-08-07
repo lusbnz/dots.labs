@@ -1,7 +1,9 @@
 .wrapper{
-    height: 500px;
+    // height: 500px;
+    width: screen;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
-    padding: 120px 24px 240px 24px;
+    padding: 0 24px 240px 24px;
 }
