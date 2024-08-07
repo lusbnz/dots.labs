@@ -40,7 +40,6 @@ function useBoundedScroll(threshold) {
 }
 
 export default function Header() {
-  let [activeTab, setActiveTab] = useState(tabs[3].id);
   let { scrollYBoundedProgress } = useBoundedScroll(400);
   let scrollYBoundedProgressDelayed = useTransform(
     scrollYBoundedProgress,
@@ -60,9 +59,9 @@ export default function Header() {
             ),
             backgroundColor: "transparent",
           }}
-          className="fixed inset-x-0 flex h-20 shadow backdrop-blur-md"
+          className="fixed inset-x-0 flex shadow backdrop-blur-md"
         >
-          <div className="flex w-full items-center justify-between px-8">
+          <div className="flex w-full h-full items-center justify-between mt-[40px] px-[48px]">
             <motion.p
               style={{
                 scale: useTransform(
@@ -73,17 +72,17 @@ export default function Header() {
               }}
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
-              <span className="w-6 h-6 rounded-full bg-white mr-2"></span>
+              <span className="w-[55px] h-[55px] rounded-full bg-white mr-2"></span>
               <span className="flex flex-col justify-center items-start">
                 <span
-                  style={{ lineHeight: "18px" }}
-                  className="text-lg tracking-[-.075em]"
+                  style={{ lineHeight: "32px" }}
+                  className="text-[28px] tracking-[-.075em]"
                 >
                   DOTS
                 </span>
                 <span
-                  style={{ lineHeight: "18px" }}
-                  className="text-lg tracking-[-.075em]"
+                  style={{ lineHeight: "32px" }}
+                  className="text-[28px] tracking-[-.075em]"
                 >
                   AGENCY
                 </span>
@@ -99,41 +98,16 @@ export default function Header() {
               }}
               className="flex space-x-4 text-sm font-medium text-slate-400"
             >
-              {/* {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`${
-                    activeTab === tab.id ? "" : "hover:text-white/60"
-                  } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                  }}
-                >
-                  {activeTab === tab.id && (
-                    <motion.span
-                      layoutId="bubble"
-                      className="absolute inset-0 z-1000 bg-white mix-blend-difference"
-                      style={{ borderRadius: 9999 }}
-                      transition={{
-                        type: "spring",
-                        bounce: 0.2,
-                        duration: 0.6,
-                      }}
-                    />
-                  )}
-                  {tab.label}
-                </button>
-              ))} */}
               <div className="flex items-center">
                 {tabs.map((tab, index) => (
                   <button
                     key={tab.id}
                     style={{
                       backgroundColor: "#ffffff",
-                      width: "80px",
-                      height: "36px",
+                      width: "148px",
+                      height: "70px",
                       color: "#000000",
+                      fontSize: "21px",
                       borderRadius: index === 0 ? "10px 0 0 10px" : index === 3 ? "0 10px 10px 0" : "0",
                     }}
                   >
@@ -146,10 +120,11 @@ export default function Header() {
                 style={{
                   backgroundColor: "#C8D5BB",
                   borderRadius: "10px",
-                  width: "80px",
-                  height: "36px",
+                  width: "148px",
+                  height: "70px",
                   marginLeft: "12px",
                   color: "#000000",
+                  fontSize: '21px'
                 }}
               >
                 Lets Talk
