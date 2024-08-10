@@ -47,18 +47,14 @@ const Member = () => {
             <div
               key={index}
               className={` ${
-                currentSlide === index
-                  ? "h-[800px] w-[425px]"
-                  : "h-[600px] w-[425px]"
-              } flex items-end justify-center rounded-[20px] relative mx-[64px] transition-all duration-300`}
+                currentSlide === index ? "h-[800px] " : "h-[600px] "
+              } w-[425px] flex items-end justify-center rounded-[20px] relative mx-[64px] transition-all duration-300`}
               style={{ display: "flex !important" }}
             >
               <div
                 className={` ${
-                  currentSlide === index
-                    ? "h-[800px] w-[425px]"
-                    : "h-[600px] w-[425px]"
-                } flex items-end justify-center rounded-[20px] relative bg-[#C8D5BB] hover:opacity-80  hover:scale-105 transition-all duration-300`}
+                  currentSlide === index ? "h-[600px] " : "h-[400px] "
+                } w-[425px] flex items-end justify-center rounded-[20px] relative bg-[#C8D5BB] hover:opacity-80  hover:scale-105 transition-all duration-300`}
                 style={{ display: "flex !important" }}
               >
                 <img
@@ -71,23 +67,23 @@ const Member = () => {
                   }}
                   className="absolute"
                 />
-                <div
-                  className={`${
-                    currentSlide === index
-                      ? "h-[800px] w-[425px]"
-                      : "h-[600px] w-[425px]"
-                  } absolute bottom-0 flex flex-col justify-end p-[28px]`}
-                  style={{
-                    zIndex: 110,
-                    background:
-                      "linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
-                  }}
-                >
-                  <span className="text-[22px]">{card.title}</span>
-                  <span className="text-[17px] opacity-40">
-                    Business Analyst
-                  </span>
-                </div>
+                {currentSlide === index && (
+                  <div
+                    className={`${
+                      currentSlide === index ? "h-[800px] " : "h-[600px]"
+                    } w-[425px] absolute bottom-0 flex flex-col justify-end p-[28px]`}
+                    style={{
+                      zIndex: 110,
+                      background:
+                        "linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
+                    }}
+                  >
+                    <span className="text-[22px]">{card.title}</span>
+                    <span className="text-[17px] opacity-40">
+                      Business Analyst
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
