@@ -11,3 +11,8 @@ body{
     font-family: 'PPRader';
     src: url('../public/fonts/PPRader-Regular.ttf');
 }
+
+.slick-track{
+    display: flex !important;
+    align-items: center;
+}

@@ -15,26 +15,45 @@ import Service from "./components/service/page";
 import Video from "./components/video/page";
 import Image from "next/image";
 import ArrowButton from "@/public/icons/arrow-down.svg";
+import { helix } from "ldrs";
+
+helix.register();
 
 export default function Home() {
   const containerRef = useRef(null);
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMainContent(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <main className="relative flex flex-col items-center overflow-x-hidden">
-      <div className="relative w-screen overflow-x-hidden">
-        <StickyCursor containerRef={containerRef} />
-        <Header />
-        <Hero />
-        <Video />
-        <About />
-        <Service />
-        <Passion containerRef={containerRef} />
-        <Member />
-        <Feedback />
-        <Contact containerRef={containerRef} />
-        <Insight />
-        <Footer />
-      </div>
+      {!showMainContent && (
+        <div className="w-[100vw] h-[100vh] flex items-center justify-center">
+          <l-helix size="100" speed="2.5" color="white"></l-helix>
+        </div>
+      )}
+      {showMainContent && (
+        <div className="relative w-screen overflow-x-hidden">
+          <StickyCursor containerRef={containerRef} />
+          <Header />
+          <Hero />
+          <Video />
+          <About />
+          <Service />
+          <Passion containerRef={containerRef} />
+          <Member />
+          <Feedback />
+          <Contact containerRef={containerRef} />
+          <Insight />
+          <Footer />
+        </div>
+      )}
     </main>
   );
 }

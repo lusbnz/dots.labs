@@ -37,7 +37,7 @@ const Member = () => {
           infinite={true}
           ref={slickRef}
           slidesToShow={3}
-          autoplay={true}
+          autoplay={false}
           arrows={false}
           beforeChange={handleBeforeChange}
           afterChange={handleAfterChange}
@@ -49,14 +49,14 @@ const Member = () => {
               key={index}
               className={` ${
                 currentSlide === index ? "h-[800px] " : "h-[600px] "
-              } w-[500px] rounded-[20px] relative mx-[64px] transition-all duration-300`}
+              } w-[500px] rounded-[20px] relative mx-[64px]`}
               style={{ display: "flex !important", alignItems: "center !important", justifyContent: "center !important" }}
             >
               <div
                 className={` ${
                   currentSlide === index ? "h-[660px] " : "h-[530px] "
-                } w-[500px] flex items-end justify-center rounded-[20px] relative bg-[#C8D5BB] hover:opacity-80  hover:scale-105 transition-all duration-300`}
-                style={{ display: "flex !important", alignItems: "center !important", justifyContent: "center !important" }}
+                } w-[500px] flex items-end justify-center rounded-[20px] relative bg-[#C8D5BB] hover:opacity-80 hover:scale-105`}
+                style={{ display: "flex !important", alignItems: "center !important", justifyContent: "center !important", }}
               >
                 <img
                   src={card.url}
@@ -64,13 +64,13 @@ const Member = () => {
                   style={{
                     height: currentSlide === index ? "800px" : "600px",
                   }}
-                  className="absolute top-[-60px] w-[500px] transition-all duration-300 rounded-[20px]"
+                  className="absolute top-[-60px] w-[500px] rounded-[20px] "
                 />
                 {currentSlide === index && (
                   <div
                     className={`${
                       currentSlide === index ? "h-[800px] " : "h-[600px]"
-                    } w-[500px] absolute bottom-0 flex flex-col justify-end p-[28px] transition-all duration-300`}
+                    } w-[500px] absolute bottom-0 flex flex-col justify-end p-[28px]`}
                     style={{
                       zIndex: 110,
                       background:
