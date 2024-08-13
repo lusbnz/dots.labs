@@ -15,21 +15,18 @@ import Service from "./components/service/page";
 import Video from "./components/video/page";
 import Image from "next/image";
 import ArrowButton from "@/public/icons/arrow-down.svg";
-import { helix } from "ldrs";
-
-helix.register();
 
 export default function Home() {
   const containerRef = useRef(null);
   const [showMainContent, setShowMainContent] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowMainContent(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
+    async function getLoader() {
+      const { helix } = await import('ldrs')
+      helix.register()
+    }
+    getLoader()
+  }, [])
 
   return (
     <main className="relative flex flex-col items-center overflow-x-hidden">

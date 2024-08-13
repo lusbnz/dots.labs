@@ -14,7 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script
+          type="module"
+          defer
+          src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/spiral.js"
+        ></script>
+        {children}
+      </body>
     </html>
   );
 }
