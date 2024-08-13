@@ -22,11 +22,17 @@ export default function Home() {
 
   useEffect(() => {
     async function getLoader() {
-      const { helix } = await import('ldrs')
-      helix.register()
+      const { helix } = await import("ldrs");
+      helix.register();
     }
-    getLoader()
-  }, [])
+    getLoader();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowMainContent(true);
+    }, 300);
+  }, []);
 
   return (
     <main className="relative flex flex-col items-center overflow-x-hidden">

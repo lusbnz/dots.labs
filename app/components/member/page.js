@@ -23,7 +23,7 @@ const Member = () => {
   return (
     <div style={{ padding: "48px 0" }}>
       <div className="flex gap-4 items-start justify-between">
-        <BreadCumb title={"ĐỘI NGŨ CỦA DOTS"} />
+        <BreadCumb title={"ĐỘI NGŨ CỦA DOTS"} unique={true}/>
         <Paragraph
           paragraph={
             "Tại DOTS, đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực."

@@ -77,7 +77,7 @@ const Passion = () => {
       }}
     >
       <div className="flex gap-8 items-start absolute top-[48px] z-[2]">
-        <BreadCumb title={"VỀ CHÚNG TÔI"} />
+        <BreadCumb title={"VỀ CHÚNG TÔI"} unique={true}/>
         {/* <Image src={D} alt="D" style={{ width: "110px", height: "90px", position: "absolute" }} /> */}
         <Paragraph paragraph={paragraph} />
       </div>

@@ -8,18 +8,21 @@ import { motion, animate, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 import MultipleItems from "./MultipleItems";
 import Slider from "react-slick";
+import img1 from "@/public/images/Mask group (1).png";
+import img2 from "@/public/images/Mask group (2).png";
+import img3 from "@/public/images/Mask group (3).png";
 
 const images = [
   {
-    url: "https://picsum.photos/600/400",
+    url: img1,
     title: "image 1",
   },
   {
-    url: "https://picsum.photos/600/400",
+    url: img2,
     title: "image 2",
   },
   {
-    url: "https://picsum.photos/600/400",
+    url: img3,
     title: "image 3",
   },
 ];
