@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import style from "./index.module.scss";
 import Image from "next/image";
 import moment from "moment";
 import "./style.css";
@@ -12,7 +11,7 @@ import D from "@/public/icons/D.svg";
 const Hero = () => {
   return (
     <div
-      className={style.wrapper}
+      className="wrapper"
       style={{
         background:
           "linear-gradient(180deg, #16160E 0%, #1D1F18 9.9%, #6C848D 100%)",
@@ -28,8 +27,7 @@ const Hero = () => {
         />
       </div>
       <motion.span
-        className="absolute flex gap-2"
-        style={{ fontSize: "18px", left: "160px", bottom: "360px" }}
+        className="absolute flex gap-2 sub-text-one"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -37,8 +35,7 @@ const Hero = () => {
         WE ARE
       </motion.span>
       <motion.div
-        className="absolute flex gap-2"
-        style={{ fontSize: "18px", left: "520px", bottom: "360px" }}
+        className="absolute flex gap-2 sub-text-two"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
@@ -47,8 +44,7 @@ const Hero = () => {
         {moment().format("h:mm A")}
       </motion.div>
       <motion.span
-        className="absolute flex gap-2"
-        style={{ fontSize: "18px", right: "42px", bottom: "360px" }}
+        className="absolute flex gap-2 sub-text-three"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -57,22 +53,16 @@ const Hero = () => {
         <Image src="/icons/arrow-down.svg" alt="arrow" width={8} height={8} />
       </motion.span>
       <motion.span
-        className="absolute"
-        style={{ fontSize: "360px", bottom: "96px", left: "42px" }}
+        className="absolute wrapper-first-text"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
       >
-        <Image src={D} alt="D" style={{ width: "520px", height: "420px" }} />
+        <Image src={D} alt="D" className="first-text" />
       </motion.span>
       <motion.span
-        className="absolute"
-        style={{
-          fontSize: "286px",
-          bottom: "-40px",
-          left: "380px",
-          fontFamily: "PPRader",
-        }}
+        className="absolute wrapper-second-text"
+        style={{ fontFamily: "PPRader" }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}

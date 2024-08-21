@@ -8,6 +8,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useState } from "react";
+import './style.css';
 
 let tabs = [
   { id: "about", label: "About" },
@@ -73,18 +74,12 @@ export default function Header() {
               }}
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
-              <span className="w-[55px] h-[55px] rounded-full bg-white mr-2"></span>
+              <span className="logo rounded-full bg-white mr-2"></span>
               <span className="flex flex-col justify-center items-start">
-                <span
-                  style={{ lineHeight: "24px" }}
-                  className="text-[24px] tracking-[-.075em]"
-                >
+                <span className="logo-text tracking-[-.075em]">
                   DOTS
                 </span>
-                <span
-                  style={{ lineHeight: "24px" }}
-                  className="text-[24px] tracking-[-.075em]"
-                >
+                <span className="logo-text tracking-[-.075em]">
                   AGENCY
                 </span>
               </span>
@@ -103,11 +98,9 @@ export default function Header() {
                 {tabs.map((tab, index) => (
                   <button
                     key={tab.id}
+                    className="header-button"
                     style={{
                       backgroundColor: "#ffffff",
-                      width: "146px",
-                      height: "70px",
-                      fontSize: "21px",
                       color: "#000000",
                       borderRadius:
                         index === 0
@@ -123,12 +116,10 @@ export default function Header() {
               </div>
 
               <button
+                className="header-button"
                 style={{
                   backgroundColor: "#C8D5BB",
                   borderRadius: "10px",
-                  width: "146px",
-                  height: "70px",
-                  fontSize: "21px",
                   marginLeft: "8px",
                   color: "#000000",
                 }}

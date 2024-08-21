@@ -1,0 +1,100 @@
+@media (1920px <= width) {
+    .logo{
+        width: 55px;
+        height: 55px;
+    }
+    .logo-text{
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .header-button{
+        width: 146px;
+        height: 70px;
+        font-size: 21px;
+    }
+}
+
+@media (1560px <= width < 1920px) {
+    .logo{
+        width: 48px;
+        height: 48px;
+    }
+    .logo-text{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .header-button{
+        width: 120px;
+        height: 55px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@media (1200px <= width < 1560px) {
+    .logo{
+        width: 44px;
+        height: 44px;
+    }
+    .logo-text{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .header-button{
+        width: 100px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media (960px <= width < 1200px) {
+    .logo{
+        width: 36px;
+        height: 36px;
+    }
+    .logo-text{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .header-button{
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+@media (600px <= width < 960px) {
+    .logo{
+        width: 32px;
+        height: 32px;
+    }
+    .logo-text{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .header-button{
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media (0px <= width < 600px) {
+    .logo{
+        width: 24px;
+        height: 24px;
+    }
+    .logo-text{
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .header-button{
+        width: 40px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
