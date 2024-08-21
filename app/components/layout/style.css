@@ -2,6 +2,65 @@
     transform-origin: left center;
   }
   
-  .rotateButton:hover {
-    transform: rotate(-2deg);
+.rotateButton:hover {
+  transform: rotate(-2deg);
+}
+
+@media (1920px <= width) {
+  .breadcrumb-text{
+    font-size: 18px;
   }
+  .paragraph{
+    font-size: 60px;
+  }
+}
+
+@media (1560px <= width < 1920px) {
+  .breadcrumb-text{
+    font-size: 18px;
+  }
+  .paragraph{
+    font-size: 52px;
+    max-width: 1440px;
+  }
+}
+
+@media (1200px <= width < 1560px) {
+  .breadcrumb-text{
+    font-size: 18px;
+  }
+  .paragraph{
+    font-size: 44px;
+    max-width: 1192px;
+  }
+}
+
+@media (960px <= width < 1200px) {
+  .breadcrumb-text{
+    font-size: 16px;
+  }
+  .paragraph{
+    font-size: 36px;
+    max-width: 980px;
+  }
+}
+
+@media (600px <= width < 960px) {
+  .breadcrumb-text{
+    font-size: 14px;
+  }
+  .paragraph{
+    font-size: 32px;
+    max-width: 742px;
+  }
+}
+
+@media (0px <= width < 600px) {
+  .breadcrumb-text{
+    font-size: 14px;
+  }
+  .paragraph{
+    font-size: 24px;
+    max-width: 520px;
+  }
+}

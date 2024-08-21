@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 import styles from "./style.module.scss";
 import DOTS from "@/public/icons/DOST.svg";
 import Image from "next/image";
+import '../style.css';
 
 export default function Paragraph({ paragraph }) {
   const container = useRef(null);
@@ -22,7 +23,7 @@ export default function Paragraph({ paragraph }) {
   );
 
   return (
-    <p ref={container} className={styles.paragraph}>
+    <p ref={container} className={`${styles.paragraph} paragraph`}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
