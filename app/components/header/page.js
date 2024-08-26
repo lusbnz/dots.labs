@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import { useEffect, useState } from "react";
 import './style.css';
+import LOGO from '@/public/Images/Union.svg'
+import Image from "next/image";
 
 let tabs = [
   { id: "about", label: "About" },
@@ -74,13 +76,13 @@ export default function Header() {
               }}
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
-              <span className="logo rounded-full bg-white mr-2"></span>
+              <Image src={LOGO} alt="" width={55} height={55} className="mr-2"/>
               <span className="flex flex-col justify-center items-start">
                 <span className="logo-text tracking-[-.075em]">
                   DOTS
                 </span>
                 <span className="logo-text tracking-[-.075em]">
-                  AGENCY
+                  LAB
                 </span>
               </span>
             </motion.p>

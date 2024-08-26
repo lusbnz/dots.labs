@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css"
 
-const ActionButton = ({width, height}) => {
+const ActionButton = ({index}) => {
   return (
     <>
       <button
-        className={`flex items-center justify-between gap-2 bg-[#C8D5BB] rounded-[80px] p-[28px] w-[${width}] h-[${height}] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#C8D5BB]/50 rotateButton`}
+        className={`action-button${index} flex items-center justify-between gap-2 bg-[#C8D5BB] rounded-[80px] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#C8D5BB]/50 rotateButton`}
       >
-        <span className="text-[21px] text-black">Lets task now!</span>
-        <div className="h-4 w-4 bg-black rounded-full"></div>
+        <span className="text-black">Lets task now!</span>
+        <div className="dots bg-black rounded-full"></div>
       </button>
     </>
   );

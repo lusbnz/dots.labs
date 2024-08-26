@@ -5,6 +5,7 @@ import style from "./index.module.css";
 import BreadCumb from "../layout/BreadCumb";
 import FeedbackImage from "@/public/images/feedback.svg";
 import Image from "next/image";
+import './style.css';
 
 const feedbacks = [
   {
@@ -122,7 +123,7 @@ const Feedback = () => {
         </div>
         <div className="flex justify-between w-100 h-100">
           <div className="flex items-start gap-[16px]">
-            <span className="flex items-center relative w-[80px]">
+            <span className="flex items-center relative left">
               <Image
                 src={FeedbackImage}
                 alt="feedback"
@@ -151,26 +152,23 @@ const Feedback = () => {
                 style={{ position: "absolute", left: "48px" }}
               />
             </span>
-            <span style={{ opacity: "0.5" }}>
+            <span className="mobile-hidden opacity-50">
               {feedbacks[currentFeedback].collaborations}
             </span>
-            <span style={{ opacity: "0.5" }}>
+            <span className="mobile-hidden opacity-50">
               {feedbacks[currentFeedback].projects}
             </span>
           </div>
           <div
-            className={`flex flex-col gap-[52px] ${style.feedbackItem}`}
+            className={`center flex flex-col gap-[52px] ${style.feedbackItem}`}
             style={{
-              maxWidth: "666px",
               animationName: animating ? getNewAnimationClass() : "",
             }}
           >
-            <span style={{ maxWidth: "666px", fontSize: "28px" }}>
+            <span>
               {feedbacks[currentFeedback].quote}
             </span>
-            <span
-              style={{ fontSize: "28px", display: "inline-flex", gap: "10px" }}
-            >
+            <span className="desc">
               <p>{feedbacks[currentFeedback].author}</p>
               <p style={{ opacity: 0.4 }}>
                 {" "}
@@ -178,7 +176,7 @@ const Feedback = () => {
               </p>
             </span>
           </div>
-          <div style={{ fontSize: "62px" }}>
+          <div className="right">
             <span>{String(currentFeedback + 1).padStart(2, "0")}</span>
             <span style={{ opacity: "0.2" }}>
               /{String(feedbacks.length).padStart(2, "0")}

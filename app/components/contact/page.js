@@ -170,7 +170,7 @@ const Contact = ({ containerRef }) => {
             placeholder="Nhu cầu cần tư vấn"
             className="w-[600px] h-[80px] pl-[28px] rounded-[12px] bg-[#191919] mb-4"
           />
-          <ActionButton width={"600px"} height={"80px"} />
+          <ActionButton index={2} />
         </div>
       </div>
     </div>

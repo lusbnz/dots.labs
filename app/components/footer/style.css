@@ -1,0 +1,90 @@
+
+@media (1920px <= width) {
+  .left-footer{
+    gap: 80px;
+  }
+  .first-footer{
+    font-size: 22px;
+  }
+  .second-footer{
+    font-size: 26px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}
+
+@media (1560px <= width < 1920px) {
+  .left-footer{
+    gap: 60px;
+  }
+  .first-footer{
+    font-size: 22px;
+  }
+  .second-footer{
+    font-size: 24px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}
+
+@media (1200px <= width < 1560px) {
+  .left-footer{
+    gap: 60px;
+  }
+  .first-footer{
+    font-size: 22px;
+  }
+  .second-footer{
+    font-size: 24px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}
+
+@media (960px <= width < 1200px) {
+  .left-footer{
+    gap: 40px;
+  }
+  .first-footer{
+    font-size: 20px;
+  }
+  .second-footer{
+    font-size: 22px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}
+
+@media (600px <= width < 960px) {
+  .left-footer{
+    gap: 30px;
+  }
+  .first-footer{
+    font-size: 18px;
+  }
+  .second-footer{
+    font-size: 16px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}
+
+@media (0px <= width < 600px) {
+  .left-footer{
+    gap: 20px;
+  }
+  .first-footer{
+    font-size: 16px;
+  }
+  .second-footer{
+    font-size: 14px;
+  }
+  .right-footer{
+    font-size: 18px;
+  }
+}

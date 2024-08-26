@@ -4,10 +4,10 @@ import React, { useEffect, useRef } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import gsap from "gsap";
+import './style.css';
 
 const Footer = () => {
   const footerRef = useRef(null);
-
 
   useEffect(() => {
     const images = footerRef.current.querySelectorAll('.image');
@@ -70,17 +70,17 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between items-end">
-        <div className="flex items-center gap-20">
+        <div className="left-footer flex items-center">
           <div className="flex flex-col gap-4 items-start">
-            <span className="text-[22px]" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Email</span>
-            <span className="text-[26px]">dotsagency.info@gmail.com</span>
+            <span className="first-footer" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Email</span>
+            <span className="second-footer">dotsagency.info@gmail.com</span>
           </div>
           <div className="flex flex-col gap-4 items-start">
-            <span className="text-[22px]" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Hotline</span>
-            <span className="text-[26px]">09328739244</span>
+            <span className="first-footer" style={{ color: "rgba(255, 255, 255, 0.20)" }}>Hotline</span>
+            <span className="second-footer">09328739244</span>
           </div>
         </div>
-        <div className="text-[18px]">2024 © Dots Co., Ltd.</div>
+        <div className="right-footer">2024 © Dots Co., Ltd.</div>
       </div>
     </div>
   );

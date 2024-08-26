@@ -13,6 +13,26 @@
   .paragraph{
     font-size: 60px;
   }
+  .action-button1{
+    padding: 28px;
+    width: 280px;
+    height: 70px;
+  }
+  .action-button1 span{
+    font-size: 21px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
+  }
 }
 
 @media (1560px <= width < 1920px) {
@@ -22,6 +42,26 @@
   .paragraph{
     font-size: 52px;
     max-width: 1440px;
+  }
+  .action-button1{
+    padding: 28px;
+    width: 280px;
+    height: 70px;
+  }
+  .action-button1 span{
+    font-size: 21px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
   }
 }
 
@@ -33,6 +73,26 @@
     font-size: 44px;
     max-width: 1192px;
   }
+  .action-button1{
+    padding: 28px;
+    width: 280px;
+    height: 70px;
+  }
+  .action-button1 span{
+    font-size: 21px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
+  }
 }
 
 @media (960px <= width < 1200px) {
@@ -42,6 +102,26 @@
   .paragraph{
     font-size: 36px;
     max-width: 980px;
+  }
+  .action-button1{
+    padding: 28px;
+    width: 260px;
+    height: 60px;
+  }
+  .action-button1 span{
+    font-size: 21px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
   }
 }
 
@@ -53,6 +133,26 @@
     font-size: 32px;
     max-width: 742px;
   }
+  .action-button1{
+    padding: 28px;
+    width: 240px;
+    height: 60px;
+  }
+  .action-button1 span{
+    font-size: 21px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
+  }
 }
 
 @media (0px <= width < 600px) {
@@ -62,5 +162,25 @@
   .paragraph{
     font-size: 24px;
     max-width: 520px;
+  }
+  .action-button1{
+    padding: 20px;
+    width: 180px;
+    height: 40px;
+  }
+  .action-button1 span{
+    font-size: 14px;
+  }
+  .action-button2{
+    padding: 28px;
+    width: 600px;
+    height: 80px;
+  }
+  .action-button2 span{
+    font-size: 21px;
+  }
+  .dots{
+    height: 16px;
+    width: 16px;
   }
 }

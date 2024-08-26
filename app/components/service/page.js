@@ -1,10 +1,10 @@
 "use client";
-import styles from "./index.module.css";
 import { useState } from "react";
 import Project from "./components/project";
 import Modal from "./components/modal";
 import BreadCumb from "../layout/BreadCumb";
 import ActionButton from "../layout/ActionButton";
+import './style.css';
 
 const projects = [
   {
@@ -31,8 +31,8 @@ export default function Service() {
     <>
       <BreadCumb title={"DỊCH VỤ CỦA CHÚNG TÔI"} />
 
-      <main className={styles.main}>
-        <div className={styles.body}>
+      <main className="main">
+        <div className="body">
           {projects.map((project, index) => {
             return (
               <Project
@@ -48,7 +48,7 @@ export default function Service() {
       </main>
 
       <div className="ml-8 mb-16">
-        <ActionButton width={"280px"} height={"70px"} />
+        <ActionButton index={1} />
       </div>
     </>
   );

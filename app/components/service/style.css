@@ -1,0 +1,166 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    opacity: 0.5;
+}
+
+.project h2{
+    margin: 0px;
+    transition: all 0.4s;
+}
+
+.description {
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.project:last-of-type{
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.project:hover{
+    height: 300px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.project:hover h2{
+    transform: translateX(-10px);
+}
+
+.project:hover p{
+    transform: translateX(10px);
+}
+
+.project p{
+    transition: all 0.4s;
+    font-weight: 300;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (1920px <= width) {
+    .project{
+        padding: 50px 100px 50px 100px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 80px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 300px;
+        font-size: 20px;
+    }
+}
+
+@media (1560px <= width < 1920px) {
+    .project{
+        padding: 50px 100px 50px 100px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 72px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 300px;
+        font-size: 20px;
+    }
+}
+
+@media (1200px <= width < 1560px) {
+    .project{
+        padding: 50px 100px 50px 100px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 300px;
+        font-size: 20px;
+    }
+}
+
+@media (960px <= width < 1200px) {
+    .project{
+        padding: 50px 50px 50px 50px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 48px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 280px;
+        font-size: 16px;
+    }
+}
+
+@media (600px <= width < 960px) {
+    .project{
+        padding: 50px 50px 50px 50px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 180px;
+        font-size: 14px;
+    }
+}
+
+@media (0px <= width < 600px) {
+    .project{
+        padding: 50px 20px 50px 20px;
+        min-height: 240px;
+    }
+
+    .project h2{
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .description {
+        max-width: 140px;
+        font-size: 10px;
+    }
+}

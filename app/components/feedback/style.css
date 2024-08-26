@@ -1,0 +1,136 @@
+
+@media (1920px <= width) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: flex;
+        font-size: 16px;
+    }
+    .center{
+        max-width: 666px;
+    }
+    .center span{
+        font-size: 28px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 62px;
+    }
+}
+
+@media (1560px <= width < 1920px) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: flex;
+        font-size: 16px;
+    }
+    .center{
+        max-width: 666px;
+    }
+    .center span{
+        font-size: 28px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 54px;
+    }
+}
+
+@media (1200px <= width < 1560px) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: flex;
+        font-size: 16px;
+    }
+    .center{
+        max-width: 666px;
+    }
+    .center span{
+        font-size: 28px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 48px;
+    }
+}
+
+@media (960px <= width < 1200px) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: flex;
+        font-size: 14px;
+    }
+    .center{
+        max-width: 500px;
+    }
+    .center span{
+        font-size: 22px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 40px;
+    }
+}
+
+@media (600px <= width < 960px) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    .center{
+        max-width: 500px;
+    }
+    .center span{
+        font-size: 18px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 36px;
+    }
+}
+
+@media (0px <= width < 600px) {
+    .left{
+        width: 80px;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    .center{
+        max-width: 333px;
+    }
+    .center span{
+        font-size: 14px;
+    }
+    .center .desc{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .right{
+        font-size: 24px;
+    }
+}
