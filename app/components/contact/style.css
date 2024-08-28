@@ -1,0 +1,299 @@
+@media (1920px <= width) {
+    .text-1{
+        width: 360px;
+        height: 300px;
+        position: absolute;
+        top: -160px;
+        left: 120px;
+    }
+    .text-2{
+        font-size: 170px;
+        top: -48px;
+        text-indent: 360px;
+    }
+    .text-3{
+        font-size: 170px;
+        top: 160px;
+        left: 50px;
+    }
+    .text-4{
+        font-size: 170px;
+        top: 360px;
+        text-indent: 580px;
+    }
+    .side-image{
+        left: 60px;
+        top: 420px;
+        width: 200px;
+        height: 136px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 600px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 34%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
+
+@media (1560px <= width < 1920px) {
+    .text-1{
+        width: 360px;
+        height: 300px;
+        position: absolute;
+        top: -160px;
+        left: 120px;
+    }
+    .text-2{
+        font-size: 140px;
+        top: 0px;
+        text-indent: 360px;
+    }
+    .text-3{
+        font-size: 140px;
+        top: 160px;
+        left: 50px;
+    }
+    .text-4{
+        font-size: 140px;
+        top: 360px;
+        text-indent: 580px;
+    }
+    .side-image{
+        left: 60px;
+        top: 420px;
+        width: 200px;
+        height: 136px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 600px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 34%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
+
+@media (1200px <= width < 1560px) {
+    .text-1{
+        width: 360px;
+        height: 300px;
+        position: absolute;
+        top: -160px;
+        left: 120px;
+    }
+    .text-2{
+        font-size: 124px;
+        top: 0px;
+        text-indent: 360px;
+    }
+    .text-3{
+        font-size: 124px;
+        top: 160px;
+        left: 115px;
+    }
+    .text-4{
+        font-size: 124px;
+        top: 360px;
+        text-indent: 580px;
+    }
+    .side-image{
+        left: 60px;
+        top: 420px;
+        width: 200px;
+        height: 136px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 600px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 30%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
+
+@media (960px <= width < 1200px) {
+    .text-1{
+        width: 320px;
+        height: 260px;
+        position: absolute;
+        top: -170px;
+        left: 120px;
+    }
+    .text-2{
+        font-size: 80px;
+        top: 0px;
+        text-indent: 320px;
+    }
+    .text-3{
+        font-size: 80px;
+        top: 160px;
+        left: 115px;
+    }
+    .text-4{
+        font-size: 80px;
+        top: 320px;
+        text-indent: 390px;
+    }
+    .side-image{
+        left: 75px;
+        top: 340px;
+        width: 200px;
+        height: 136px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 500px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 20%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
+
+@media (600px <= width < 960px) {
+    .text-1{
+        width: 240px;
+        height: 160px;
+        position: absolute;
+        top: -70px;
+        left: 100px;
+    }
+    .text-2{
+        font-size: 64px;
+        top: 20px;
+        text-indent: 210px;
+    }
+    .text-3{
+        font-size: 64px;
+        top: 140px;
+        left: 80px;
+    }
+    .text-4{
+        font-size: 64px;
+        top: 240px;
+        text-indent: 240px;
+    }
+    .side-image{
+        left: 75px;
+        top: 260px;
+        width: 140px;
+        height: 80px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 360px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 10%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
+
+@media (0px <= width < 600px) {
+    .text-1{
+        width: 320px;
+        height: 260px;
+        position: absolute;
+        top: -170px;
+        left: 120px;
+    }
+    .text-2{
+        font-size: 80px;
+        top: 0px;
+        text-indent: 320px;
+    }
+    .text-3{
+        font-size: 80px;
+        top: 160px;
+        left: 115px;
+    }
+    .text-4{
+        font-size: 80px;
+        top: 320px;
+        text-indent: 390px;
+    }
+    .side-image{
+        left: 75px;
+        top: 340px;
+        width: 200px;
+        height: 136px;
+    }
+    .text-5{
+        font-size: 16px;
+        top: 500px;
+        max-width: 300px;
+    }
+    .form-container{
+        right: 20%;
+        top: 60%;
+        gap: 8px;
+    }
+    .form-item{
+        width: 600px;
+        height: 80px;
+        padding-left: 28px;
+        border-radius: 12px;
+    }
+    .form-item.end{
+        margin-bottom: 24px;
+    }
+}
